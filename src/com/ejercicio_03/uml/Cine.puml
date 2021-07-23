@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Cine{
+    - Sala sala
+    - double entrada
+
+    void crearCine()
+    void mostrarSala()
+    void llenarSala()
+}
+
+class Sala{
+    - List<Espectador> espectadores
+    - int[6][8] asientos
+    - Pelicula pelicula
+
+    void crearSala()
+    List<Espectador> juntarEspectadores
+
+}
+
+class Pelicula{
+    - String titulo
+    - int duracion
+    - int edadMinima
+    - String director
+    void crearPelicula()
+}
+
+class Espectador{
+    - String nombre
+    - int edad
+    - double dinero
+    void crearEspectador()
+}
+
+Cine*-"1.1"Sala
+Sala*--"1.1"Pelicula
+Sala*--"1.*"Espectador
+
+@enduml

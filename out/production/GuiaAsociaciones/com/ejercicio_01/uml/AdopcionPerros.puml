@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Persona {
+    - String nombre
+    - String apellido
+    - int edad
+    - int documento
+    - Perro perro
+
+    void crearPersona()
+    void adoptarPerro(Perro)
+    void mostrarPersona(Persona)
+    void mostrarPerro(Persona)
+}
+
+class Service{
+    void metodo()
+    void metodo2()
+}
+
+class Perro{
+    - String nombre
+    - String raza
+    - int edad
+    - double tamaño
+
+    void crearPerro()
+}
+
+Service-Persona
+Persona "1.1"*- Perro
+@enduml
