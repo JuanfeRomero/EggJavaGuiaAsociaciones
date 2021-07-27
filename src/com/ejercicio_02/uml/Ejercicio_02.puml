@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Revolver {
+    - int posicionActual
+    - int posicionDelAgua
+
+    void llenarRevolver(Revolver r)
+    boolean mojar()
+    void siguienteChorro()
+}
+
+class Jugador {
+    - static int id
+    - int idAsignado
+    - String nombre
+    - boolean mojado
+
+    void disparo(Revolver r)
+}
+
+class Juego {
+    -List<Jugador> jugadores
+    -Revolver revolver
+
+    + void llenarJuego()
+    - void crearJugadores()
+    + void ronda()
+}
+
+Juego o-->"1.1" Revolver
+Juego *-->"1.*"Jugador
+Jugador - Revolver
+@enduml
