@@ -14,11 +14,6 @@ class Persona {
     void mostrarPerro(Persona)
 }
 
-class Service{
-    void metodo()
-    void metodo2()
-}
-
 class Perro{
     - String nombre
     - String raza
@@ -28,6 +23,5 @@ class Perro{
     void crearPerro()
 }
 
-Service-Persona
 Persona "1.1"*- Perro
 @enduml
