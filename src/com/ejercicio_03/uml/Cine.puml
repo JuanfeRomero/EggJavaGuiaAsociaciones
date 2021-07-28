@@ -16,7 +16,7 @@ class Sala{
     - Pelicula pelicula
 
     void crearSala()
-    List<Espectador> juntarEspectadores
+    List<Espectador> juntarEspectadores()
 
 }
 
